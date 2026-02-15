@@ -1,32 +1,38 @@
-# Blender-DDS-Addon v0.5.0
+# Krita-DDS-Addon
+This is a fork of the following projects. It replaces the Texconv.exe/ImageMagick Dependency and replaces it with cbindings for a cross-platform lib of Texconv.
+As of this post it's still a fork of the blender add-on solely, and I may deside to not use either of these dds add-ons as the base, and just use them as inspiration.
 
-[![Github All Releases](https://img.shields.io/github/downloads/matyalatte/Blender-DDS-Addon/total.svg)]()
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-![build](https://github.com/matyalatte/Blender-DDS-Addon/actions/workflows/build.yml/badge.svg)
+DDS File Exporter for Krita (GNU-V3):
+https://krita-artists.org/t/python-plugin-dds-support-windows-only/73488
+https://github.com/esuriddick/Programming/tree/main/Python/Krita/DDS_File_Exporter
+https://github.com/esuriddick/Programming/tree/main/Python/Krita/DDS_File_Importer
 
-Blender addon to import and export dds textures  
-  
-![Screenshot](https://github.com/user-attachments/assets/1e799e6c-ba5e-48b9-bbf4-0908fc5b4c54)  
+-OR-
+DDS-Evrika-Plugin (MIT):
+https://github.com/Sepera-okeq/DDS-Evrika-Plugin
 
-## Features
+Blender-DDS-Addon (MIT):
+https://github.com/matyalatte/Blender-DDS-Addon
+https://github.com/matyalatte/Texconv-Custom-DLL
 
-- Import DDS textures as TGA (or HDR)
-- Export textures as DDS
-- Support many DXGI formats (including BC6, BC7, and ASTC)
-- Support non-2D textures (cubemaps, arrays, and volume textures)
-- Some utilities (invert normals, edit texture arrays, etc.)
+#### First Method
+1. Open [Krita](https://krita.org) and go to _Tools_ > _Scripts_ > _Import Python Plugins..._, and select the **x.zip** archive.
+2. Restart [Krita](https://krita.org).
+3. Go to _Settings_ > _Configure Krita..._ > _Python Plugin Manager_, and click the checkbox to the left of the field that says **x**.
+4. Restart [Krita](https://krita.org).
+
+#### Second Method
+1. Extract the content within the folder **x** to the folder **pykrita** (typically located here: C:\Users\USERNAME\AppData\Roaming\krita, where **USERNAME** should be replaced with your Windows username).
+2. Restart [Krita](https://krita.org).
+3. Go to _Settings_ > _Configure Krita..._ > _Python Plugin Manager_, and click the checkbox to the left of the field that says **DDS File Importer**.
+4. Restart [Krita](https://krita.org).
+
+### Execute
+Go to the menu item _Tools_ > _Scripts_, and press the option named _Export DDS_. Choose the desired format to convert the DDS file into, and then it will appear in Krita.
 
 ## Download
 
-You can download zip files from [the release page](https://github.com/matyalatte/Blender-DDS-Addon/releases).  
-
--   `blender_dds_addon*_Windows-*.zip` is for Windows.
--   `blender_dds_addon*_macOS.zip` is for Mac (10.15 or later).
--   `blender_dds_addon*_Linux-x64.zip` is for Linux with GLIBC 2.27+ and GLIBCXX 3.4.26+.
-
 ## Getting Started
-
-[Getting Started · matyalatte/Blender-DDS-Addon Wiki](https://github.com/matyalatte/Blender-DDS-Addon/wiki/Getting-Started)
 
 ## Supported Formats
 
@@ -143,19 +149,12 @@ Here is a list of supported formats.
 
 </details>
 
-## Non-2D Textures
-The addon supports non-2D textures except for partial cubemaps.  
-See wiki pages for the details.  
-
-- [Cubemaps](https://github.com/matyalatte/Blender-DDS-Addon/wiki/Cubemaps)  
-- [Texture Arrays](https://github.com/matyalatte/Blender-DDS-Addon/wiki/Texture-Arrays)  
-
 ## External Projects
 
 ### Texconv-Custom-DLL
 
 [Texconv](https://github.com/microsoft/DirectXTex/wiki/Texconv)
-is a texture converter developed by Microsoft, and [Texconv-Custom-DLL](https://github.com/matyalatte/Texconv-Custom-DLL) is a cross-platform implementation I made.  
+is a texture converter developed by Microsoft, and [Texconv-Custom-DLL](https://github.com/matyalatte/Texconv-Custom-DLL) is a cross-platform implementation.  
 The official Texconv only supports Windows but you can use it on Unix/Linux systems.  
 It is released under the [MIT license](../LICENSE).
 
